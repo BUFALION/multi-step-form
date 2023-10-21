@@ -10,7 +10,7 @@ const btnNextTexts = {
 };
 
 let steps = []
-let currentStepId = 2;
+let currentStepId = 1;
 
 export const joinForm = (externalSteps) =>{
     steps = externalSteps
