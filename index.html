@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Multi-step form</title>
+
+
+</head>
+<body>
+  <div class="multi-form-container">
+    <div class="multi-form">
+      <div class="form-navigation">
+        <ul class="steps-label-list">
+          <li class="step-label step--active">
+            <div class="step-num-circle">
+                <p class="step-num">1</p>
+            </div>
+            <div class="step-description">
+              <p class="step-title">
+                STEP 1
+              </p>
+              <p class="step-subtitle">
+                YOUR INFO
+              </p>
+            </div>
+          </li>
+          <li class="step-label">
+            <div class="step-num-circle">
+              <p class="step-num">2</p>
+            </div>
+            <div class="step-description">
+              <p class="step-title">
+                STEP 2
+              </p>
+              <p class="step-subtitle">
+                SELECT PLAN
+              </p>
+            </div>
+          </li>
+          <li class="step-label">
+            <div class="step-num-circle">
+              <p class="step-num">3</p>
+            </div>
+            <div class="step-description">
+              <p class="step-title">
+                STEP 3
+              </p>
+              <p class="step-subtitle">
+                ADD-ONS
+              </p>
+            </div>
+          </li>
+          <li class="step-label">
+            <div class="step-num-circle">
+              <p class="step-num">4</p>
+            </div>
+            <div class="step-description">
+              <p class="step-title">
+                STEP 4
+              </p>
+              <p class="step-subtitle">
+                SUMMARY
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="step-container" data-interval="month">
+        <div id="step1" class="step hidden">
+          <header class="step-header"><h1>Personal info</h1></header>
+          <h4 class="step-title">Please provide your email address, and phone number</h4>
+          <div class="input-list">
+              <div class="input-container">
+                <label for="nameInput" class="step-label">Name</label>
+                <input required
+                       id="nameInput"
+                       type="text"
+                       class="step-input"
+                       placeholder="e.g. Stephen King"
+                >
+                <div class="error-message">This field is required</div>
+              </div>
+            <div class="input-container">
+              <label for="emailInput" class="step-label">Email Address</label>
+              <input required
+                     id="emailInput"
+                     type="text"
+                     class="step-input"
+                     placeholder="e.g. stephenking@lorem.com"
+              >
+              <div class="error-message">This field is required</div>
+            </div>
+            <div class="input-container">
+              <label for="phoneInput" class="step-label">Phone Number</label>
+              <input required id="phoneInput"
+                     type="text"
+                     class="step-input"
+                     placeholder="e.g. +1 234 567 890"
+              >
+              <div class="error-message">This field is required</div>
+            </div>
+          </div>
+        </div>
+        <div id="step2" class="step hidden">
+          <header class="step-header"><h1>Select your plan</h1></header>
+          <h4 class="step-title">You have the option of monthly or yearly billing</h4>
+          <div class="card-list">
+            <div class="card" data-card="arcade">
+              <img src="assets/images/icon-arcade.svg" alt="" class="card-img">
+              <div class="card-text">
+                <h3 class="card-type">Arcade</h3>
+                <h4 class="card-price">$9/mo</h4>
+                <p class="card-free-month">2 months free</p>
+              </div>
+            </div>
+            <div class="card" data-card="advanced">
+              <img src="assets/images/icon-advanced.svg" alt="" class="card-img">
+              <div class="card-text">
+                <h3 class="card-type">Advanced</h3>
+                <h4 class="card-price" >$12/mo</h4>
+                <p class="card-free-month">2 months free</p>
+              </div>
+            </div>
+            <div class="card" data-card="pro">
+              <img src="assets/images/icon-pro.svg" alt="" class="card-img">
+              <div class="card-text">
+                <h3 class="card-type">Pro</h3>
+                <h4 class="card-price">$15/mo</h4>
+                <p class="card-free-month">2 months free</p>
+              </div>
+            </div>
+          </div>
+          <div class="switch-container ">
+            <p class="sub-type left">Monthly</p>
+            <label class="switch">
+              <input type="checkbox" id="switch">
+              <span class="slider round"></span>
+            </label>
+            <p class="sub-type right">Year</p>
+          </div>
+        </div>
+        <div id="step3" class="step hidden">
+          <header class="step-header"><h1>Pick add-ons</h1></header>
+          <h4 class="step-title">Add-ons help enhance your gaming experience</h4>
+
+            <ul class="add-ons-list">
+              <li class="add-ons">
+                <label class="add-ons-container">
+                  <input type="checkbox">
+                  <p class="add-ons-text">
+                    Online service <br/>
+                    <span class="add-ons-subtitle">
+                      Access to multiplayer games
+                    </span>
+                  </p>
+                  <p class="add-ons-price">+$1/mo</p>
+                </label>
+
+              </li>
+              <li class="add-ons">
+                <label class="add-ons-container">
+                  <input type="checkbox">
+                  <p class="add-ons-text">
+                    Larger storage <br/>
+                    <span class="add-ons-subtitle">
+                      Extra 1TB of cloud save
+                    </span>
+                  </p>
+                  <p class="add-ons-price">+$2/mo</p>
+                </label>
+
+              </li>
+              <li class="add-ons">
+                <label class="add-ons-container">
+                  <input type="checkbox">
+                  <p class="add-ons-text">
+                    Cusomizable Profile <br/>
+                    <span class="add-ons-subtitle">
+                      Custom theme on your profile
+                    </span>
+                  </p>
+                  <p class="add-ons-price">+$2/mo</p>
+                </label>
+
+              </li>
+            </ul>
+
+        </div>
+        <div id="step4" class="step hidden">
+          <header class="step-header"><h1>Finishing up</h1></header>
+          <h4 class="step-title">Double-check everything looks OK before confirming</h4>
+          <ul class="check">
+          </ul>
+          <div class="total-price">
+          </div>
+        </div>
+        <div id="step5" class="step hidden">
+          <div class="confirmation-message-container">
+            <img src="assets/images/icon-thank-you.svg" alt="">
+            <h1 class="confirmation-tittle">Thank you!</h1>
+            <p class="confirmation-description">Thanks for confirming your subscription! We hope you have fun using our platform. If you ever need support, please feel free to email us at support@loremgaming.com</p>
+          </div>
+        </div>
+        <div class="button-navigation">
+          <button class="btn-back">Go Back</button>
+          <button class="btn-next">Next Step</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
